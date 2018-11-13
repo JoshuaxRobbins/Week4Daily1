@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addToListTest"
+        android:text="Load New List" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:text="Male"
+            android:onClick="genderFlip"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbMale"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Female"
+            android:onClick="genderFlip"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbFemale"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="Both"
+            android:onClick="genderFlip"
+            android:id="@+id/rbBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:text="US"
+            android:onClick="natFlip"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbUS"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="CA"
+            android:onClick="natFlip"
+            android:layout_width="wrap_content"
+            android:id="@+id/rbCA"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="AU"
+            android:onClick="natFlip"
+            android:id="@+id/rbAU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="All"
+            android:onClick="natFlip"
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPersonList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
